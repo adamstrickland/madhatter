@@ -1,6 +1,10 @@
+<h1>Friends</h1>
+<hr/>
+<%= link_to "add new", new_friend_url %>
+<hr/>
 <%- @friends.each do |f| -%>
   <div>
     <h2><%= f.name %></h2>
-    <div><%= image_tag f.avatar.url(:square) %></div>
+    <div><%= image_tag asset_url(f.avatar.path(:square)) %></div>
   </div>
 <%- end -%>
